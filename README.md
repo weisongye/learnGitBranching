@@ -63,6 +63,35 @@ Here is the high level process of the build:
 
 Thus, if you build the app locally, all you have to do in order to run the app is just open up `index.html` in the root directory of the repo. Pretty simple
 
+## Building on Ubuntu 14.04 LTS 64bit
+
+```
+sudo apt-get update
+sudo apt-get install -y python-software-properties software-properties-common
+sudo add-apt-repository ppa:chris-lea/node.js
+gpg --keyserver keyserver.ubuntu.com --recv C7917B12
+gpg --export --armor C7917B12 > /tmp/key.asc
+cat /tmp/key.asc | sudo apt-key add -
+sudo apt-get update
+
+sudo apt-get install nodejs
+# sudo apt-get install nodejs-legacy
+# sudo apt-get install npm
+# sudo npm install -g grunt-cli
+# sudo npm install grunt --save-dev
+
+git clone <your fork of the repo>
+
+cd learnGitBranching
+
+rm -rf node_modules/
+npm cache clean
+
+npm install
+
+grunt fastBuild
+```
+
 ## Building yourself / Contributing Functionality
 
 For contributing core functionality in the app, you'll probably want to test your changes
