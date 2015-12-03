@@ -244,7 +244,7 @@ var initDemo = function(sandbox) {
   if (params.locale !== undefined && params.locale.length) {
     LocaleActions.changeLocaleFromURI(params.locale);
   } else {
-    tryLocaleDetect();
+    // tryLocaleDetect();
   }
 
   if (params.command) {
@@ -256,6 +256,7 @@ var initDemo = function(sandbox) {
 
 };
 
+/*
 function tryLocaleDetect() {
   // lets fire off a request to get our headers which then
   // can help us identify what locale the browser is in.
@@ -272,6 +273,7 @@ function tryLocaleDetect() {
     console.warn('locale detect fail', e);
   }
 }
+*/
 
 function changeLocaleFromHeaders(langString) {
   LocaleActions.changeLocaleFromHeader(langString);
