@@ -21,7 +21,7 @@ var GRAPHICS = {
   defaultAnimationTime: 400,
 
   rectFill: 'hsb(0.8816909813322127,0.6,1)',
-  headRectFill: '#2831FF',
+  headRectFill: '#804040',
   rectStroke: '#FFF',
   rectStrokeWidth: '3',
 
